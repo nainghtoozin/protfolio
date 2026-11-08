@@ -66,7 +66,7 @@ const CLINIC_PROJECT = {
     "Centralized Clinic Administration",
   ],
   // EDIT LIVE DEMO URL
-  liveDemoUrl: "https://sssccccapp.kesug.com/",
+  liveDemoUrl: "https://myclinic-app.infinityfreeapp.com/",
   // EDIT ADMIN PANEL URL
   adminPanelUrl: "https://myclinic-app.infinityfreeapp.com/login",
   // EDIT GITHUB URL
