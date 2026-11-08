@@ -399,7 +399,7 @@ body::before {
 
 /* ---------- Featured Projects ---------- */
 .featured-project {
-  padding: 2.2rem;
+  padding: 1.6rem 1.8rem;
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, var(--surface), rgba(255,255,255,0.01));
   border: 1px solid var(--border);
@@ -453,15 +453,18 @@ body::before {
 .feature-list {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 0.6rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.15rem 0.8rem;
 }
 
 .feature-list li {
   color: var(--muted);
-  padding: 0.35rem 0;
-  padding-left: 1.4rem;
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
   position: relative;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .feature-list li::before {
@@ -474,7 +477,11 @@ body::before {
 
 .featured-meta {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ---------- Other Projects ---------- */
@@ -657,3 +664,229 @@ footer a:hover { color: var(--text); }
 /* Utility */
 .muted { color: var(--muted); }
 .divider { height: 1px; background: var(--border); border: 0; }
+
+/* ---------- Status Badge ---------- */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  color: #fcd34d;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Project Gallery ---------- */
+.project-gallery {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  margin-top: 0.6rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-gallery::-webkit-scrollbar { height: 6px; }
+.project-gallery::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.gallery-thumb {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 33.333%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-2);
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.gallery-thumb:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-thumb:hover img { transform: scale(1.08); }
+
+.featured-image {
+  cursor: pointer;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+  display: block;
+}
+
+/* ---------- Demo Access ---------- */
+.demo-access {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(124, 92, 255, 0.05);
+  border: 1px solid rgba(124, 92, 255, 0.22);
+}
+
+.demo-access h6 { font-size: 0.95rem; margin-bottom: 0.25rem; }
+.demo-access p { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
+
+.demo-toggle { font-size: 0.85rem; padding: 0.45rem 1rem; }
+
+.demo-credentials[hidden] { display: none; }
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.5rem;
+  align-items: baseline;
+  padding: 0.2rem 0;
+  font-size: 0.88rem;
+}
+
+.demo-label {
+  color: var(--muted);
+  font-weight: 600;
+  min-width: 110px;
+}
+
+.demo-value {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.demo-access .btn.is-copied {
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(4, 6, 16, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox-stage {
+  max-width: 92vw;
+  max-height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-stage img {
+  max-width: 92vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  z-index: 10001;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.4rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(124, 92, 255, 0.6);
+  border-color: var(--accent);
+  transform: scale(1.08);
+}
+
+.lightbox-close {
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev:hover { transform: translateY(-50%) scale(1.08); }
+.lightbox-next:hover { transform: translateY(-50%) scale(1.08); }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  .gallery-thumb { width: 100%; max-width: 100%; aspect-ratio: 16 / 10; height: auto; }
+  .feature-list { grid-template-columns: 1fr; }
+  .lightbox-close, .lightbox-nav { width: 40px; height: 40px; }
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+  .demo-label { min-width: 100%; }
+}

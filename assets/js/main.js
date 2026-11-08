@@ -26,7 +26,111 @@ const PERSONAL = {
 // =========================================================
 const SOCIAL = {
   github: "https://github.com/nainghtoozin",
-  linkedin: "", // EDIT: add your LinkedIn URL
+  // EDIT: add your LinkedIn URL
+  linkedinUrl: "https://www.linkedin.com/in/naing-htoo-zin-109343281/",
+};
+
+// =========================================================
+// CENTRALIZED PROJECT LINKS (edit URLs here)
+// =========================================================
+const PROJECT_URLS = {
+  // EDIT: replace with your actual Social App demo URL
+  socialAppDemoUrl: "YOUR_SOCIAL_APP_DEMO_URL",
+};
+
+// =========================================================
+// CLINIC PROJECT CONFIGURATION (single source of truth)
+// Edit project name, description, screenshots, tech stack,
+// URLs, and demo credentials here.
+// =========================================================
+const CLINIC_PROJECT = {
+  // EDIT PROJECT NAME
+  name: "Clinic Management System",
+  // EDIT DESCRIPTION
+  description:
+    "An integrated Clinic Management System designed to streamline daily healthcare operations. It provides tools for managing patient records, appointments, doctors, departments, services, and administrative activities through a centralized dashboard.",
+  // EDIT PROJECT SCREENSHOTS (local files in assets/projects/)
+  // Main preview image:
+  image: "assets/projects/clinic-preview.png", // ADD IMAGE PATH
+  // Optional extra screenshots (local files)
+  screenshots: ["assets/projects/clinic-dashboard.png", "assets/projects/clinic-appointment.png"], // e.g. ["assets/projects/clinic-dashboard.png"]
+  // EDIT TECHNOLOGIES
+  technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript"],
+  // EDIT FEATURES
+  features: [
+    "Patient Records & History Management",
+    "Appointment Scheduling",
+    "Doctor & Staff Management",
+    "Department & Service Management",
+    "Admin Dashboard",
+    "Centralized Clinic Administration",
+  ],
+  // EDIT LIVE DEMO URL
+  liveDemoUrl: "https://sssccccapp.kesug.com/",
+  // EDIT ADMIN PANEL URL
+  adminPanelUrl: "https://myclinic-app.infinityfreeapp.com/login",
+  // EDIT GITHUB URL
+  githubUrl: "https://github.com/nainghtoozin/clinic-app",
+  // EDIT DEMO ADMIN CREDENTIALS (placeholders - replace with real demo account)
+  demoEmail: "[EDIT_DEMO_EMAIL]",
+  demoPassword: "[EDIT_DEMO_PASSWORD]",
+};
+
+// =========================================================
+// SOCIAL APP CONFIGURATION (centralized)
+// Edit live demo URL, GitHub URL, and demo credentials here.
+// =========================================================
+const SOCIAL_APP = {
+  // EDIT: Social App live demo URL
+  demoUrl: "https://nhzsocialblog.fwh.is/?i=1",
+  // EDIT: GitHub repository URL
+  githubUrl: "https://github.com/nainghtoozin/social-app",
+  // EDIT: dedicated demo account credentials
+  demoEmail: "khantmaw@gmail.com",
+  demoPassword: "password",
+};
+
+// =========================================================
+// SOCIAL APP PROJECT CONFIGURATION (Featured Project 02)
+// Edit description, screenshots, tech stack, and links here.
+// Screenshots: place files under assets/projects/social-app/
+// (e.g. social-app-preview.png, social-app-dashboard.png, ...)
+// =========================================================
+const SOCIAL_APP_PROJECT = {
+  // EDIT PROJECT NAME
+  name: "Social App",
+  // EDIT DESCRIPTION
+  description:
+    "A social media web application that allows users to connect and interact through user profiles, posts, likes, and comments. Built with Laravel and designed to provide an interactive social networking experience.",
+  // EDIT PROJECT SCREENSHOTS (local files in assets/projects/)
+  // Main preview image (existing):
+  image: "assets/projects/social-preview.png", // ADD IMAGE PATH
+  // Optional extra screenshots (local files under assets/projects/social-app/)
+  screenshots: [], // e.g. ["assets/projects/social-app/social-app-dashboard.png"]
+  // EDIT TECHNOLOGIES
+  technologies: ["Laravel", "PHP", "MySQL"],
+  // EDIT FEATURES
+  features: [
+    "User Authentication",
+    "User Profiles",
+    "Create and Manage Posts",
+    "Like and Unlike Posts",
+    "Comment System",
+    "Follow and Unfollow Users",
+  ],
+  // EDIT LIVE DEMO URL (centralized)
+  liveDemoUrl: SOCIAL_APP.demoUrl,
+  // EDIT ADMIN PANEL URL (not applicable)
+  adminPanelUrl: "",
+  // EDIT GITHUB URL
+  githubUrl: SOCIAL_APP.githubUrl,
+  // Demo account access (compact expandable section)
+  demoAccess: true,
+  demoDescription:
+    "Want to explore the Social App? Use the demo account below to sign in and try the available features. No registration is required for demo access.",
+  demoEmail: SOCIAL_APP.demoEmail,
+  demoPassword: SOCIAL_APP.demoPassword,
+  demoPasswordToggle: true,
 };
 
 // =========================================================
@@ -35,75 +139,27 @@ const SOCIAL = {
 // Set liveDemoUrl / githubUrl to "" to show a placeholder button.
 // =========================================================
 const FEATURED_PROJECTS = [
-  {
-    // EDIT PROJECT NAME
-    name: "Clinic Management System",
-    // EDIT DESCRIPTION
-    description:
-      "A full-featured clinic management system handling patient records, appointments, doctors, and an admin dashboard. Deployed live for real-world use.",
-    // EDIT PROJECT SCREENSHOTS (local files in assets/projects/)
-    // Example: "assets/projects/clinic-preview.png"
-    image: "", // ADD IMAGE PATH
-    // Optional extra screenshots (local files)
-    screenshots: [], // e.g. ["assets/projects/clinic-dashboard.png"]
-    // EDIT TECHNOLOGIES
-    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript"],
-    // EDIT FEATURES
-    features: [
-      "Patient records & history management",
-      "Appointment scheduling",
-      "Doctor & staff management",
-      "Admin dashboard",
-    ],
-    // EDIT LIVE DEMO URL
-    liveDemoUrl: "https://sssccccapp.kesug.com/",
-    // EDIT ADMIN PANEL URL
-    adminPanelUrl: "https://myclinic-app.infinityfreeapp.com/login",
-    // EDIT GITHUB URL
-    githubUrl: "https://github.com/nainghtoozin/clinic-app",
-  },
-  {
-    // EDIT PROJECT NAME
-    name: "E-commerce Website",
-    // EDIT DESCRIPTION
-    description:
-      "An online shopping platform with product management, shopping cart, checkout flow, and an admin panel for managing the store.",
-    // EDIT PROJECT SCREENSHOTS (local files in assets/projects/)
-    // Example: "assets/projects/ecommerce-preview.png"
-    image: "", // ADD IMAGE PATH
-    // Optional extra screenshots (local files)
-    screenshots: [], // e.g. ["assets/projects/ecommerce-dashboard.png"]
-    // EDIT TECHNOLOGIES
-    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    // EDIT FEATURES
-    features: [
-      "Product catalog & categories",
-      "Shopping cart & checkout",
-      "Order management",
-      "Admin panel",
-    ],
-    // EDIT LIVE DEMO URL
-    liveDemoUrl: "", // ADD LIVE DEMO URL
-    // EDIT ADMIN PANEL URL (optional)
-    adminPanelUrl: "", // ADD ADMIN PANEL URL
-    // EDIT GITHUB URL
-    githubUrl: "https://github.com/nainghtoozin/Book-Shops",
-  },
+  // Clinic project is sourced from CLINIC_PROJECT above (centralized config).
+  { ...CLINIC_PROJECT, demoAccess: true },
+  // Social App project is sourced from SOCIAL_APP_PROJECT above (centralized config).
+  { ...SOCIAL_APP_PROJECT },
 ];
 
 // =========================================================
 // EDIT OTHER PROJECTS HERE
+// Order: E-commerce Website, Bookshop & User Management System
 // =========================================================
 const OTHER_PROJECTS = [
   {
-    name: "Social App",
+    name: "E-commerce Website",
     description:
-      "Social media application with authentication, posts, likes, comments, and user profiles.",
-    // Example: "assets/projects/social-preview.png"
-    image: "assets/projects/social-preview.png", // ADD IMAGE PATH
+      "An online shopping platform with product management, shopping cart, checkout functionality, and an administrative dashboard.",
+    // Example: "assets/projects/ecommerce-preview.png"
+    image: "", // ADD IMAGE PATH
     technologies: ["Laravel", "PHP", "MySQL"],
-    githubUrl: "https://github.com/nainghtoozin/social-app",
-    liveDemoUrl: "", // ADD LIVE DEMO URL
+    githubUrl: "https://github.com/nainghtoozin/Book-Shops",
+    liveDemoUrl: "", // No live demo - project in development
+    status: "In Development",
   },
   {
     name: "Bookshop & User Management System",
@@ -162,8 +218,17 @@ function placeholderImage(text) {
   return `<div class="placeholder">[ADD IMAGE PATH]<br><small>${escapeHtml(text)}</small></div>`;
 }
 
+function isPlaceholderUrl(url) {
+  if (!url) return true;
+  const v = url.trim();
+  if (v === "") return true;
+  if (v.toUpperCase().includes("YOUR_")) return true;
+  if (v.startsWith("[") && v.endsWith("]")) return true;
+  return false;
+}
+
 function actionButton(url, label, primary) {
-  if (url && url.trim() !== "") {
+  if (!isPlaceholderUrl(url)) {
     const cls = primary ? "btn-primary-custom" : "btn-ghost";
     return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="btn ${cls}">${label}</a>`;
   }
@@ -178,14 +243,28 @@ function renderFeaturedProjects() {
   if (!container) return;
   container.innerHTML = FEATURED_PROJECTS.map((project, index) => {
     const reverse = index % 2 === 1;
-    const imageHtml = project.image && project.image.trim() !== ""
-      ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.name)} screenshot" loading="lazy">`
+
+    // Build the full gallery list from local images only.
+    const gallery = [];
+    if (project.image && project.image.trim() !== "") gallery.push(project.image);
+    (project.screenshots || []).forEach((s) => {
+      if (s && s.trim() !== "" && !gallery.includes(s)) gallery.push(s);
+    });
+    const hasImages = gallery.length > 0;
+
+    const mainImageHtml = hasImages
+      ? `<img src="${escapeHtml(gallery[0])}" alt="${escapeHtml(project.name)} screenshot" loading="lazy">`
       : placeholderImage(project.name);
 
-    const extraShots = (project.screenshots || [])
-      .filter((s) => s && s.trim() !== "")
-      .map((s) => `<img src="${escapeHtml(s)}" alt="${escapeHtml(project.name)} screenshot" loading="lazy" style="width:72px;height:48px;object-fit:cover;border-radius:8px;border:1px solid var(--border);">`)
-      .join("");
+    const galleryHtml = hasImages
+      ? `<div class="project-gallery mt-3" role="list">
+           ${gallery.map((src, i) => `
+             <button type="button" class="gallery-thumb" data-gallery-id="${index}" data-gallery-index="${i}" aria-label="Open ${escapeHtml(project.name)} screenshot ${i + 1}">
+               <img src="${escapeHtml(src)}" alt="${escapeHtml(project.name)} screenshot ${i + 1}" loading="lazy">
+             </button>
+           `).join("")}
+         </div>`
+      : "";
 
     const techs = project.technologies.map((t) => `<span class="project-tag">${escapeHtml(t)}</span>`).join("");
     const features = project.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("");
@@ -198,15 +277,42 @@ function renderFeaturedProjects() {
       actionButton(project.githubUrl, "View Source Code", false),
     ].join("");
 
+    // Demo Access section (used for the Clinic project).
+    let demoAccessHtml = "";
+    if (project.demoAccess) {
+      const showToggle = project.demoPasswordToggle ? `
+            <button type="button" class="btn btn-ghost btn-sm" data-pw-toggle aria-pressed="true">Hide Password</button>` : "";
+      demoAccessHtml = `
+        <div class="demo-access mt-3">
+          <h6 class="mb-1"><i class="bi bi-shield-lock me-2"></i>Demo Account Available</h6>
+          <p class="mb-2">${escapeHtml(project.demoDescription || "No registration required. Use the demo credentials to explore the administration dashboard.")}</p>
+          <button type="button" class="btn btn-ghost btn-sm demo-toggle" data-demo-toggle aria-expanded="false">View Demo Credentials</button>
+          <div class="demo-credentials mt-2" hidden>
+            <div class="demo-row"><span class="demo-label">Demo Email:</span> <code class="demo-value">${escapeHtml(project.demoEmail)}</code></div>
+            <div class="demo-row"><span class="demo-label">Demo Password:</span> <code class="demo-value demo-password" data-password="${escapeHtml(project.demoPassword)}">${escapeHtml(project.demoPassword)}</code></div>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <button type="button" class="btn btn-ghost btn-sm" data-copy-value="${escapeHtml(project.demoEmail)}">Copy Email</button>
+              <button type="button" class="btn btn-ghost btn-sm" data-copy-value="${escapeHtml(project.demoPassword)}">Copy Password</button>
+              ${showToggle}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Register gallery for the lightbox.
+    window.PROJECT_GALLERIES = window.PROJECT_GALLERIES || {};
+    window.PROJECT_GALLERIES[index] = gallery;
+
     return `
       <div class="col-12">
         <article class="featured-project reveal">
-          <div class="row g-4 align-items-center ${reverse ? "flex-lg-row-reverse" : ""}">
-            <div class="col-lg-6">
-              <div class="featured-image">${imageHtml}</div>
-              ${extraShots ? `<div class="d-flex flex-wrap gap-2 mt-3">${extraShots}</div>` : ""}
+          <div class="row g-4 align-items-start ${reverse ? "flex-lg-row-reverse" : ""}">
+            <div class="col-lg-5">
+              <div class="featured-image" ${hasImages ? `role="button" tabindex="0" onclick="openLightbox(window.PROJECT_GALLERIES[${index}], 0)" style="cursor:pointer;"` : ""}>${mainImageHtml}</div>
+              ${galleryHtml}
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-7">
               <span class="eyebrow">Featured Project ${String(index + 1).padStart(2, "0")}</span>
               <h3 class="mt-2">${escapeHtml(project.name)}</h3>
               <p class="featured-meta">${escapeHtml(project.description)}</p>
@@ -215,6 +321,7 @@ function renderFeaturedProjects() {
               <div class="hero-actions mt-3">
                 ${buttons}
               </div>
+              ${demoAccessHtml}
             </div>
           </div>
         </article>
@@ -231,16 +338,35 @@ function renderOtherProjects() {
       ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.name)} screenshot" loading="lazy">`
       : placeholderImage(project.name);
     const techs = project.technologies.map((t) => `<span class="project-tag">${escapeHtml(t)}</span>`).join("");
+
+    const inDevelopment = project.status && project.status.trim().toLowerCase() === "in development";
+    const statusBadge = project.status && project.status.trim() !== ""
+      ? `<span class="status-badge">${escapeHtml(project.status)}</span>`
+      : "";
+
+    // Live Demo button: hidden entirely for in-development projects.
+    const liveDemoBtn = inDevelopment
+      ? ""
+      : actionButton(project.liveDemoUrl, "View Live Demo", true);
+
+    // GitHub button: only if a valid repository URL exists.
+    const githubBtn = !isPlaceholderUrl(project.githubUrl)
+      ? actionButton(project.githubUrl, "View Source Code", false)
+      : "";
+
     return `
       <div class="col-md-6 col-lg-4">
         <article class="project-card reveal">
           <div class="thumb">${imageHtml}</div>
-          <h5>${escapeHtml(project.name)}</h5>
+          <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+            <h5 class="mb-0">${escapeHtml(project.name)}</h5>
+            ${statusBadge}
+          </div>
           <p>${escapeHtml(project.description)}</p>
           <div class="mb-3">${techs}</div>
-          <div class="d-flex gap-2 mt-auto">
-            ${actionButton(project.liveDemoUrl, "View Live Demo", true)}
-            ${actionButton(project.githubUrl, "View Source Code", false)}
+          <div class="d-flex gap-2 mt-auto flex-wrap">
+            ${liveDemoBtn}
+            ${githubBtn}
           </div>
         </article>
       </div>
@@ -306,7 +432,7 @@ function hydratePersonal() {
   }
   const li = document.getElementById("socialLinkedin");
   if (li) {
-    if (SOCIAL.linkedin) { li.href = SOCIAL.linkedin; li.style.display = ""; }
+    if (SOCIAL.linkedinUrl) { li.href = SOCIAL.linkedinUrl; li.style.display = ""; }
     else { li.style.display = "none"; }
   }
   const footerGh = document.getElementById("footerGithub");
@@ -316,7 +442,7 @@ function hydratePersonal() {
   }
   const footerLi = document.getElementById("footerLinkedin");
   if (footerLi) {
-    if (SOCIAL.linkedin) footerLi.href = SOCIAL.linkedin;
+    if (SOCIAL.linkedinUrl) footerLi.href = SOCIAL.linkedinUrl;
     else footerLi.style.display = "none";
   }
 
@@ -327,7 +453,7 @@ function hydratePersonal() {
   }
   const linkedinContact = document.getElementById("contactLinkedinLink");
   if (linkedinContact) {
-    if (SOCIAL.linkedin) { linkedinContact.href = SOCIAL.linkedin; linkedinContact.textContent = SOCIAL.linkedin.replace("https://", ""); }
+    if (SOCIAL.linkedinUrl) { linkedinContact.href = SOCIAL.linkedinUrl; linkedinContact.textContent = SOCIAL.linkedinUrl.replace("https://", ""); }
     else { linkedinContact.textContent = "Add LinkedIn URL"; linkedinContact.classList.add("placeholder-text"); }
   }
 }
@@ -391,6 +517,172 @@ function initSmoothAnchors() {
   });
 }
 
+// =========================================================
+// Lightbox
+// =========================================================
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function updateLightbox() {
+  const img = document.getElementById("lightboxImg");
+  const counter = document.getElementById("lightboxCounter");
+  const prev = document.getElementById("lightboxPrev");
+  const next = document.getElementById("lightboxNext");
+  if (!img || lightboxImages.length === 0) return;
+  img.src = lightboxImages[lightboxIndex];
+  img.alt = `Screenshot ${lightboxIndex + 1} of ${lightboxImages.length}`;
+  if (counter) counter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
+  const showNav = lightboxImages.length > 1;
+  if (prev) prev.style.display = showNav ? "" : "none";
+  if (next) next.style.display = showNav ? "" : "none";
+}
+
+function openLightbox(images, index) {
+  if (!images || images.length === 0) return;
+  lightboxImages = images.slice();
+  lightboxIndex = Math.max(0, Math.min(index || 0, lightboxImages.length - 1));
+  updateLightbox();
+  const lb = document.getElementById("lightbox");
+  if (lb) {
+    lb.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeLightbox() {
+  const lb = document.getElementById("lightbox");
+  if (lb) lb.classList.remove("is-open");
+  document.body.style.overflow = "";
+  lightboxImages = [];
+}
+
+function nextLightbox() {
+  if (lightboxImages.length === 0) return;
+  lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+  updateLightbox();
+}
+
+function prevLightbox() {
+  if (lightboxImages.length === 0) return;
+  lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+  updateLightbox();
+}
+
+// =========================================================
+// Copy helper
+// =========================================================
+async function copyText(text, btn) {
+  try {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+      await navigator.clipboard.writeText(text);
+    } else {
+      throw new Error("clipboard unavailable");
+    }
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.top = "-9999px";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand("copy"); } catch (err) { }
+    document.body.removeChild(ta);
+  }
+  if (btn) {
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.classList.add("is-copied");
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove("is-copied");
+    }, 1500);
+  }
+}
+
+function initLightbox() {
+  const lb = document.getElementById("lightbox");
+  if (!lb) return;
+  const closeBtn = document.getElementById("lightboxClose");
+  const prevBtn = document.getElementById("lightboxPrev");
+  const nextBtn = document.getElementById("lightboxNext");
+  if (closeBtn) closeBtn.addEventListener("click", (e) => { e.stopPropagation(); closeLightbox(); });
+  if (prevBtn) prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prevLightbox(); });
+  if (nextBtn) nextBtn.addEventListener("click", (e) => { e.stopPropagation(); nextLightbox(); });
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb) closeLightbox();
+  });
+  // touch swipe
+  let startX = 0;
+  lb.addEventListener("touchstart", (e) => {
+    if (e.touches && e.touches.length === 1) startX = e.touches[0].clientX;
+  }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (!e.changedTouches || e.changedTouches.length !== 1) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) {
+      if (dx < 0) nextLightbox(); else prevLightbox();
+    }
+  }, { passive: true });
+  // keyboard
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("is-open")) return;
+    if (e.key === "Escape") closeLightbox();
+    else if (e.key === "ArrowLeft") prevLightbox();
+    else if (e.key === "ArrowRight") nextLightbox();
+  });
+
+  // Delegated clicks: gallery thumbnails & copy buttons
+  document.addEventListener("click", (e) => {
+    const thumb = e.target.closest(".gallery-thumb");
+    if (thumb) {
+      const gid = thumb.getAttribute("data-gallery-id");
+      const idx = parseInt(thumb.getAttribute("data-gallery-index"), 10) || 0;
+      const gals = window.PROJECT_GALLERIES || {};
+      if (gals[gid]) openLightbox(gals[gid], idx);
+      return;
+    }
+    const copyBtn = e.target.closest("[data-copy-value]");
+    if (copyBtn) {
+      copyText(copyBtn.getAttribute("data-copy-value"), copyBtn);
+      return;
+    }
+    const toggle = e.target.closest("[data-demo-toggle]");
+    if (toggle) {
+      const panel = toggle.parentElement.querySelector(".demo-credentials");
+      if (panel) {
+        const nowHidden = panel.hasAttribute("hidden");
+        if (nowHidden) panel.removeAttribute("hidden");
+        else panel.setAttribute("hidden", "");
+        toggle.setAttribute("aria-expanded", nowHidden ? "true" : "false");
+        toggle.textContent = nowHidden ? "Hide Demo Credentials" : "View Demo Credentials";
+      }
+      return;
+    }
+    const pwToggle = e.target.closest("[data-pw-toggle]");
+    if (pwToggle) {
+      const container = pwToggle.closest(".demo-credentials");
+      const pwEl = container ? container.querySelector(".demo-password") : null;
+      if (pwEl) {
+        const actual = pwEl.getAttribute("data-password") || "";
+        const isHidden = pwEl.textContent !== actual;
+        // if currently showing masked, reveal; else mask
+        if (pwEl.textContent === actual) {
+          pwEl.textContent = "•".repeat(actual.length || 8);
+          pwToggle.textContent = "Show Password";
+          pwToggle.setAttribute("aria-pressed", "false");
+        } else {
+          pwEl.textContent = actual;
+          pwToggle.textContent = "Hide Password";
+          pwToggle.setAttribute("aria-pressed", "true");
+        }
+      }
+      return;
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   hydratePersonal();
   renderSkills();
@@ -398,6 +690,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderOtherProjects();
   initNavbar();
   initSmoothAnchors();
+  initLightbox();
   // reveal after render
   requestAnimationFrame(() => initReveal());
 });
