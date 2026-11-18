@@ -72,8 +72,8 @@ const CLINIC_PROJECT = {
   // EDIT GITHUB URL
   githubUrl: "https://github.com/nainghtoozin/clinic-app",
   // EDIT DEMO ADMIN CREDENTIALS (placeholders - replace with real demo account)
-  demoEmail: "[EDIT_DEMO_EMAIL]",
-  demoPassword: "[EDIT_DEMO_PASSWORD]",
+  demoEmail: "[vokuneva@example.com]",
+  demoPassword: "[password]",
 };
 
 // =========================================================
